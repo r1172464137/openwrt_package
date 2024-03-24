@@ -21,7 +21,6 @@ if (pattern.test(currentUrl)) {
 	mainRightElement.style.overflowX = "visible";
 	mainRightElement.style.overflowY = "visible";
 
-	// 延时 500 毫秒执行
 	setTimeout(function() {
 		// 获取页面滚动高度
 		var pageHeight = document.body.scrollHeight;
@@ -29,7 +28,7 @@ if (pattern.test(currentUrl)) {
 		// 将 .main-left （左侧菜单）元素的高度设置为当前页面滚动高度
 		var mainLeftElement = document.querySelector(".main-left");
 		mainLeftElement.style.height = pageHeight + "px";
-	}, 500);
+	}, 0);
 }
 
 return baseclass.extend({
